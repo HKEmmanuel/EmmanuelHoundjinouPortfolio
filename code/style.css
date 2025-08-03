@@ -1,0 +1,750 @@
+/* ------------------ RESET ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ------------------ NAVIGATION ------------------ */
+nav {
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* ------------------ HERO ------------------ */
+#hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0099ff, #00cc88);
+  color: white;
+}
+.typing {
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+#hero p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+/* ------------------ PROFIL ------------------ */
+.profil-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.profil-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1e90ff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profil-photo:hover {
+  transform: scale(1.05);
+}
+
+.profil-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.profil-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.profil-text p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive: photo au-dessus sur petit écran */
+@media (max-width: 768px) {
+  .profil-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ------------------ SECTIONS ------------------ */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+p,
+li {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+ul {
+  list-style: disc inside;
+}
+/* ------------------ À PROPOS ------------------ */
+#about {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#about h2 {
+  margin-bottom: 1rem;
+}
+#about p {
+  margin-bottom: 1.5rem;
+}
+button {
+  background: #0099ff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #007acc;
+}
+#photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+#about a {
+  color: #0099ff;
+  text-decoration: none;
+}
+#about a:hover {
+  text-decoration: underline;
+}
+#about img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+#about img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+#about .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#about .social-links a {
+  color: #0099ff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+#about .social-links a:hover {
+  color: #007acc;
+}
+#about .social-links i {
+  transition: color 0.3s ease;
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInFlip {
+  from {
+    opacity: 0;
+    transform: rotateY(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideRotate {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotate(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideZoom {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlidePulse {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeInSlideFlip {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotateY(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateY(0);
+  }
+}
+
+#highlights {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+#highlights h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive: stack les images sur petit écran */
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------ ÉDUCATION ------------------ */
+#education {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#education h2 {
+  margin-bottom: 1rem;
+}
+/* ------------------ COMPÉTENCES ------------------ */
+#skills {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#skills h2 {
+  margin-bottom: 1rem;
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#skills li {
+  background: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* ------------------ PROJETS ------------------ */
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0099ff;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ ABOUT ------------------ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.about-text {
+  font-size: 1rem;
+}
+.about-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.skills {
+  list-style: none;
+  padding: 0;
+}
+.skills li {
+  background: #e0f7fa;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-text,
+  .about-extra {
+    text-align: center;
+  }
+  .about-img {
+    margin-top: 1rem;
+  }
+}
+
+/* ------------------ INTÉRÊTS ------------------ */
+#interests {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#interests h2 {
+  margin-bottom: 1rem;
+}
+#interests ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#interests li {
+  background: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+/* ------------------ CONTACT ------------------ */
+#contact {
+  background: #f0f0f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#contact h2 {
+  margin-bottom: 1rem;
+}
+#contact p {
+  margin-bottom: 1.5rem;
+}
+#contact a {
+  color: #0099ff;
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ FORMULAIRE ------------------ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input,
+textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #0099ff;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #007acc;
+}
+
+/* ------------------ FOOTER ------------------ */
+#socials {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+#socials h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 2rem;
+  color: #333;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1e90ff;
+  transform: scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #111;
+  color: white;
+}
+
+/* ------------------ ANIMATION ------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  input,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTop:hover {
+  background-color: #0c6ae8;
+  transform: scale(1.1);
+}
