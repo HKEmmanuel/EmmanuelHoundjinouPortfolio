@@ -686,18 +686,6 @@ footer {
   color: white;
 }
 
-/* ------------------ ANIMATION ------------------ */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
   nav {
@@ -747,4 +735,41 @@ footer {
 #scrollToTop:hover {
   background-color: #0c6ae8;
   transform: scale(1.1);
+}
+#socials {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
+
+#socials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  background-color: #007bff;
 }
