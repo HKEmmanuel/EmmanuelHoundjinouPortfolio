@@ -27,20 +27,29 @@
       </ul>
     </nav>
 
-    <!-- 🎯 Hero Section -->
+    <!-- 🎯 Hero Section moderne -->
     <section id="hero">
-      <div class="profil-container">
-        <img
-          src="profil.jpg"
-          alt="Photo de profil de Emmanuel"
-          class="profil-photo"
-        />
-        <div class="profil-text">
-          <h1 class="typing">Hi, moi c’est Emmanuel Houndjinou</h1>
+      <div class="hero-flex">
+        <div class="hero-photo">
+          <img
+            src="profil.jpg"
+            alt="Photo de profil de Emmanuel"
+            class="profil-photo"
+          />
+        </div>
+        <div class="hero-content">
+          <span class="hero-badge">👋 Hello, moi c’est</span>
+          <h1>Emmanuel Houndjinou</h1>
+          <h2>Stratège Digital & Tech Evangelist</h2>
           <p>
-            Stratège Digital | Tech Evangelist | Agro-informaticien Économiste🌍
+            Passionné par l’innovation, j’aide les organisations à créer des
+            solutions numériques durables et inclusives.<br />
+            <strong>Agro-informaticien & Économiste</strong>
           </p>
-          <a href="#contact" class="cta-btn">Me contacter</a>
+          <div class="hero-actions">
+            <a href="#projects" class="cta-btn">Voir mes projets</a>
+            <a href="#contact" class="cta-btn secondary-btn">Me contacter</a>
+          </div>
         </div>
       </div>
       <div class="scroll-down">
@@ -48,7 +57,6 @@
         <i class="fas fa-chevron-down"></i>
       </div>
     </section>
-
     <!-- 👤 À propos -->
     <section id="highlights">
       <h2>Voici ce que je fais sur le terrain</h2>
@@ -99,6 +107,26 @@
             <h3>Agroéconomie</h3>
             <p class="education-school">
               ESA-UL (TOGO) <span class="education-date">2023</span>
+            </p>
+          </div>
+        </div>
+        <!-- Exemple d'item virtuel à dupliquer/modifier -->
+        <div class="education-item">
+          <img src="rt_logo.jpeg" alt="Virtuel 1" class="education-logo" />
+          <div>
+            <h3>BAC II</h3>
+            <p class="education-school">
+              Complexe scolaire Islamique
+              <span class="education-date">2018</span>
+            </p>
+          </div>
+        </div>
+        <div class="education-item">
+          <img src="rt_logo.jpeg" alt="Virtuel 2" class="education-logo" />
+          <div>
+            <h3>Birth</h3>
+            <p class="education-school">
+              Lome (TOGO) <span class="education-date">2000</span>
             </p>
           </div>
         </div>
@@ -211,7 +239,7 @@
           <a
             href="https://hkemmanuel.github.io/EmmanuelHoundjinouPortfolio/"
             target="_blank"
-            >Voir le code</a
+            >See site</a
           >
         </div>
         <div class="project-card">
@@ -226,7 +254,7 @@
             une présentation.
           </p>
           <a href="https://keen-cactus-7569f4.netlify.app/" target="_blank"
-            >Voir le code</a
+            >See app</a
           >
         </div>
         <!-- Ajoute d'autres .project-card ici si besoin -->
@@ -244,12 +272,14 @@
             expertise allie agro-informatique et économie pour créer des
             solutions durables.
           </p>
+          <br />
           <p>
             J'ai une expérience significative dans la conception et la
             coordination de projets à fort impact social, notamment dans les
             domaines de l'éducation et de l'agriculture. Mon objectif est de
             transformer les défis en opportunités grâce à la technologie.
           </p>
+          <br />
           <p>
             En tant que Tech Evangelist, je promeus l'innovation et l'inclusion
             numérique, en mettant l'accent sur l'accessibilité et la durabilité.
@@ -257,17 +287,20 @@
             d'application me permet de combiner compétences techniques et vision
             stratégique.
           </p>
+          <br />
           <p>
             Je suis toujours à la recherche de nouvelles collaborations et
             opportunités pour contribuer à un avenir numérique plus inclusif et
             durable.
           </p>
+          <br />
           <p>
             <strong
               >Contactez-moi pour échanger sur des projets passionnants
               !</strong
             >
           </p>
+          <br />
           <a href="#contact" class="cta-btn">Contact</a>
         </div>
         <div class="about-extra">
@@ -318,16 +351,44 @@
     <!-- 📬 Contact -->
     <section id="contact">
       <h2>Contactez-moi</h2>
-      <form action="#" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
-        <textarea
-          name="message"
-          placeholder="Votre message"
-          required
-        ></textarea>
-        <button type="submit" class="cta-btn">Envoyer</button>
-      </form>
+      <div class="contact-flex">
+        <div class="contact-info">
+          <h3>Je suis à votre écoute</h3>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+22870013362">(+228) 70013362</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:houndjinouemmanuel@gmail.com"
+              >houndjinouemmanuel@gmail.com</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/mhkemmanuel" target="_blank"
+              >LinkedIn</a
+            >
+          </p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/HKEmmanuel" target="_blank">GitHub</a>
+          </p>
+          <p style="margin-top: 1.5rem">
+            N’hésitez pas à me contacter pour toute collaboration ou question !
+          </p>
+        </div>
+        <form action="#" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea
+            name="message"
+            placeholder="Votre message"
+            required
+          ></textarea>
+          <button type="submit" class="cta-btn">Envoyer</button>
+        </form>
+      </div>
     </section>
 
     <!-- 🧾 Footer -->
