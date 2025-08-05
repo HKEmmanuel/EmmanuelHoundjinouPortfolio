@@ -5,86 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon Portfolio - Emmanuel Houndjinou</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        background: var(--color-bg);
-        color: var(--color-text);
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: var(--color-heading);
-      }
-      nav {
-        background: var(--color-primary);
-        color: #fff;
-      }
-      .nav-links a {
-        color: #fff;
-      }
-      .nav-links a:hover {
-        color: var(--color-accent);
-      }
-      #hero {
-        background: linear-gradient(
-          135deg,
-          var(--color-accent),
-          var(--color-secondary)
-        );
-        color: #fff;
-      }
-      button,
-      #about a,
-      .project-card a,
-      #contact a {
-        background: var(--color-accent);
-        color: #fff;
-      }
-      button:hover,
-      #about a:hover,
-      .project-card a:hover,
-      #contact a:hover {
-        background: var(--color-link);
-        color: #fff;
-      }
-      #about,
-      #skills {
-        background: #fff;
-        color: var(--color-text);
-      }
-      #education,
-      #interests,
-      #contact {
-        background: #f0f0f0;
-        color: var(--color-text);
-      }
-      .project-card {
-        background: #fff;
-        color: var(--color-text);
-      }
-      .nav-links a.active {
-        color: var(--color-link);
-      }
-      a {
-        color: var(--color-link);
-      }
-      a:hover {
-        color: var(--color-accent);
-      }
-      footer {
-        background: var(--color-primary);
-        color: #fff;
-      }
-      .social-icons a {
-        background: var(--color-primary);
-        color: #fff;
-      }
-      .social-icons a:hover {
-        background: var(--color-link);
-        color: #fff;
-      }
-    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -96,7 +16,7 @@
   </head>
   <body>
     <!-- 🌐 Navigation -->
-    <nav>
+    <nav class="sticky-nav">
       <div class="logo">Emmanuel Houndjinou</div>
       <ul class="nav-links">
         <li><a href="#about">À propos</a></li>
@@ -112,7 +32,7 @@
       <div class="profil-container">
         <img
           src="profil.jpg"
-          alt="Photo de profil de Mickadoule"
+          alt="Photo de profil de Emmanuel"
           class="profil-photo"
         />
         <div class="profil-text">
@@ -120,26 +40,42 @@
           <p>
             Stratège Digital | Tech Evangelist | Agro-informaticien Économiste🌍
           </p>
+          <a href="#contact" class="cta-btn">Me contacter</a>
         </div>
+      </div>
+      <div class="scroll-down">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
       </div>
     </section>
 
     <!-- 👤 À propos -->
-    <!-- grille de 3 photo avec description -->
     <section id="highlights">
       <h2>Voici ce que je fais sur le terrain</h2>
       <div class="grid-gallery">
         <div class="gallery-item">
-          <img src="terrain1.jpg" alt="terrain1" />
+          <img
+            src="terrain1.jpg"
+            alt="Accompagnement des jeunes et professionnels"
+          />
+          <h3>Accompagnement</h3>
           <p>Accompagnement des jeunes et professionnels</p>
         </div>
         <div class="gallery-item">
-          <img src="terrain2.jpg" alt="terrain2" />
-          <p>Developpement de strategie et de produit innovant</p>
+          <img
+            src="terrain2.jpg"
+            alt="Développement de stratégie et de produit innovant"
+          />
+          <h3>Innovation</h3>
+          <p>Développement de stratégie et de produit innovant</p>
         </div>
         <div class="gallery-item">
-          <img src="terrain3.jpg" alt="terrain3" />
-          <p>Analyse et management de projet a impact social</p>
+          <img
+            src="terrain3.jpg"
+            alt="Analyse et management de projet à impact social"
+          />
+          <h3>Impact Social</h3>
+          <p>Analyse et management de projet à impact social</p>
         </div>
       </div>
     </section>
@@ -147,9 +83,29 @@
     <!-- 🎓 Parcours Éducatif -->
     <section id="education">
       <h2>Mon Parcours</h2>
-      <p>Diplôme en Developpement d'Application en cours à ESGIS-TOGO</p>
-      <p>Diplôme en Agroeconomie a ESA-UL (TOGO)</p>
-      <a href="cvemmanuelhoundjinou.pdf" download>Télécharger mon CV</a>
+      <div class="education-timeline">
+        <div class="education-item">
+          <img src="esgis.jpg" alt="ESGIS-TOGO" class="education-logo" />
+          <div>
+            <h3>Informatique</h3>
+            <p class="education-school">
+              ESGIS-TOGO <span class="education-date">En cours</span>
+            </p>
+          </div>
+        </div>
+        <div class="education-item">
+          <img src="ul.jpeg" alt="ESA-UL" class="education-logo" />
+          <div>
+            <h3>Agroéconomie</h3>
+            <p class="education-school">
+              ESA-UL (TOGO) <span class="education-date">2023</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="cvemmanuelhoundjinou.pdf" download class="cv-btn"
+        >Télécharger mon CV</a
+      >
     </section>
 
     <!-- 🧠 Langages -->
@@ -157,23 +113,82 @@
       <h2>Outils de travail</h2>
       <div>
         <h3>Informatique</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>SQL</li>
-          <!-- Tu peux en ajouter -->
+        <ul class="skills-icons">
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML5"
+              title="HTML5"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS3"
+              title="CSS3"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              title="JavaScript"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              title="Python"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="SQL"
+              title="SQL"
+            />
+          </li>
         </ul>
       </div>
       <div>
         <h3>Projet</h3>
-        <ul>
-          <li>Git & GitHub</li>
-          <li>Figma</li>
-          <li>Canva</li>
-          <li>WordPress</li>
-          <!-- Tu peux en ajouter -->
+        <ul class="skills-icons">
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+              title="Git"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              title="GitHub"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+              alt="Figma"
+              title="Figma"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+              alt="Canva"
+              title="Canva"
+            />
+          </li>
+          <li>
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+              alt="WordPress"
+              title="WordPress"
+            />
+          </li>
         </ul>
       </div>
     </section>
@@ -181,27 +196,40 @@
     <!-- 🛠️ Projets -->
     <section id="projects">
       <h2>Mes projets</h2>
-
-      <div class="project-card">
-        <h3>Portfolio Personnel</h3>
-        <p>
-          Un site responsive pour présenter mon profil, mes compétences et mes
-          projets. Construit avec HTML & CSS.
-        </p>
-        <a
-          href="https://github.com/HKEmmanuel/EmmanuelHoundjinouPortfolio.git"
-          target="_blank"
-          >Voir le code</a
-        >
-      </div>
-
-      <div class="project-card">
-        <h3>Todo List App</h3>
-        <p>
-          Application de gestion de tâches simple, codée en JavaScript pour une
-          presentation .
-        </p>
-        <a href="#" target="_blank">Voir le code</a>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="portfolio.jpg"
+            alt="Capture Portfolio"
+            class="project-img"
+          />
+          <h3>Portfolio Personnel</h3>
+          <p>
+            Un site responsive pour présenter mon profil, mes compétences et mes
+            projets. Construit avec HTML & CSS.
+          </p>
+          <a
+            href="https://hkemmanuel.github.io/EmmanuelHoundjinouPortfolio/"
+            target="_blank"
+            >Voir le code</a
+          >
+        </div>
+        <div class="project-card">
+          <img
+            src="esi.jpg"
+            alt="Capture Système d'Évaluation des Enseignements"
+            class="project-img"
+          />
+          <h3>Système d'Évaluation des Enseignements</h3>
+          <p>
+            Application de gestion de tâches simple, codée en JavaScript pour
+            une présentation.
+          </p>
+          <a href="https://keen-cactus-7569f4.netlify.app/" target="_blank"
+            >Voir le code</a
+          >
+        </div>
+        <!-- Ajoute d'autres .project-card ici si besoin -->
       </div>
     </section>
 
@@ -240,21 +268,10 @@
               !</strong
             >
           </p>
-          <button><a href="#contact">Contact</a></button>
+          <a href="#contact" class="cta-btn">Contact</a>
         </div>
-
         <div class="about-extra">
-          <!-- Tu peux mettre une image, une animation, ou une liste de compétences -->
-          <img src="apropos.jpg" alt="Photo de Micka" class="about-img" />
-          <!-- OU -->
-          <!--
-      <ul class="skills">
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Design Thinking</li>
-      </ul>
-      -->
+          <img src="apropos.jpg" alt="Photo de Emmanuel" class="about-img" />
         </div>
       </div>
     </section>
@@ -262,18 +279,46 @@
     <!-- 🌟 Centres d'intérêt -->
     <section id="interests">
       <h2>Centres d’intérêt</h2>
-      <ul>
-        <li>Frontend design</li>
-        <li>Accessibilité web</li>
-        <li>Open-source</li>
-        <li>Technologies durables</li>
+      <ul class="interests-list">
+        <li>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="Frontend design"
+            class="interest-icon"
+          />
+          Frontend design
+        </li>
+        <li>
+          <img
+            src="https://img.icons8.com/fluency/48/accessibility2.png"
+            alt="Accessibilité web"
+            class="interest-icon"
+          />
+          Accessibilité web
+        </li>
+        <li>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="Open-source"
+            class="interest-icon"
+          />
+          Open-source
+        </li>
+        <li>
+          <img
+            src="https://img.icons8.com/fluency/48/renewable-energy.png"
+            alt="Technologies durables"
+            class="interest-icon"
+          />
+          Technologies durables
+        </li>
       </ul>
     </section>
 
     <!-- 📬 Contact -->
     <section id="contact">
       <h2>Contactez-moi</h2>
-      <form action="#" method="POST">
+      <form action="#" method="POST" class="contact-form">
         <input type="text" name="name" placeholder="Votre nom" required />
         <input type="email" name="email" placeholder="Votre email" required />
         <textarea
@@ -281,7 +326,7 @@
           placeholder="Votre message"
           required
         ></textarea>
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="cta-btn">Envoyer</button>
       </form>
     </section>
 
@@ -305,12 +350,11 @@
             title="Twitter"
             ><i class="fab fa-twitter"></i
           ></a>
-          <a href="houndjinouemmanuel@gmail.com" title="Email"
+          <a href="mailto:houndjinouemmanuel@gmail.com" title="Email"
             ><i class="fas fa-envelope"></i
           ></a>
         </div>
       </section>
-
       <p>&copy; 2025 HKEmmanuel. Tous droits réservés.</p>
     </footer>
     <button id="scrollToTop" title="Retour en haut">⬆</button>
