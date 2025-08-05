@@ -248,6 +248,41 @@ nav {
   }
 }
 
+/* Animation pour les éléments du hero */
+/* filepath: c:\Users\DELL\Documents\GitHub\EmmanuelHoundjinouPortfolio.github.io\style.css */
+.hero-photo,
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 0.8s forwards;
+}
+
+.hero-photo {
+  animation-delay: 0.1s;
+}
+.hero-content .hero-badge {
+  animation-delay: 0.3s;
+}
+.hero-content h1 {
+  animation-delay: 0.5s;
+}
+.hero-content h2 {
+  animation-delay: 0.7s;
+}
+.hero-content p {
+  animation-delay: 0.9s;
+}
+.hero-actions {
+  animation-delay: 1.1s;
+}
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ====== HIGHLIGHTS ====== */
 #highlights {
   padding: 4rem 2rem;
